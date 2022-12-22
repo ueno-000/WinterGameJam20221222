@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6690396002745975036}
   - component: {fileID: 2270819656158583782}
   - component: {fileID: 5887795854486456818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ScoreHigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}

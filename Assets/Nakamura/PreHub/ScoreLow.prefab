@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4574444645323575839}
   - component: {fileID: 4574444645323575836}
   - component: {fileID: 5199214971681120693}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ScoreLow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
