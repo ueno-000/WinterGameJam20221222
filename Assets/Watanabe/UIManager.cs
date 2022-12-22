@@ -12,8 +12,8 @@ public class UIManager : MonoBehaviour
     [Tooltip("Ÿ—˜A”s–k‚ÌSprite")]
     [SerializeField] private Sprite[] _winning = new Sprite[2];
 
-    private string _w = "Ÿ—˜";
-    private string _l = "”s–k";
+    private string _w = "‚©‚¿";
+    private string _l = "‚Ü‚¯";
 
     private void Start()
     {
