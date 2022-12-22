@@ -1,3 +1,4 @@
+using Common;
 using UnityEngine;
 
 /// <summary>
@@ -5,12 +6,12 @@ using UnityEngine;
 /// </summary>
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private float _timer = 100f;
-    [Tooltip("P1のスコア")]
+    [Tooltip("制限時間")]
+    [SerializeField] private float _timer = Define.GAME_TIME;
     [SerializeField] private int _scoreOne = 0;
-    [Tooltip("P2のスコア")]
     [SerializeField] private int _scoreTwo = 0;
 
+    /// <summary> 勝利判定 </summary>
     private Winning _win = default;
 
     public int ScoreOne { get => _scoreOne; set => _scoreOne = value; }
@@ -21,32 +22,32 @@ public class GameManager : MonoBehaviour
     {
         _timer -= Time.deltaTime;
 
-        //遷移処理は別のクラス
+        //制限時間が0になったら勝利判定して終了
         if (_timer <= 0f)
         {
-            //制限時間が0になったら勝利判定して終了
             if (_scoreOne > _scoreTwo)
             {
-                //P1の勝ち
-                _win = Winning.PLAYER_ONE;
+                _win = Winning.PlayerOne;
             }
             else if (_scoreOne < _scoreTwo)
             {
-                //P2の勝ち
-                _win = Winning.PLAYER_TWO;
+                _win = Winning.PlayerTwo;
             }
             else if (_scoreOne == _scoreTwo)
             {
-                //Draw
-                _win = Winning.DRAW;
+                _win = Winning.Draw;
             }
+            SceneChangeScript.LoadScene(Define.SCENENAME_RESULT);
         }
     }
 }
 
+/// <summary>
+/// 勝ち、引き分け
+/// </summary>
 public enum Winning
 {
-    PLAYER_ONE,
-    PLAYER_TWO,
-    DRAW
+    PlayerOne,
+    PlayerTwo,
+    Draw
 }
