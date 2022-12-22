@@ -15,12 +15,12 @@ public class GameManager : MonoBehaviour
     private GameManager _instance = default;
     private SceneManager _scene = default;
     /// <summary> Ÿ—˜”»’è </summary>
-    private Winning _win = default;
+    private static Winning _win = default;
 
     public static float Timer { get => _timer; set => _timer = value; }
     public static int ScoreOne { get => _scoreOne; set => _scoreOne = value; }
     public static int ScoreTwo { get => _scoreTwo; set => _scoreTwo = value; }
-    public Winning Win { get => _win; set => _win = value; }
+    public static Winning Win { get => _win; set => _win = value; }
 
     private void Start()
     {
