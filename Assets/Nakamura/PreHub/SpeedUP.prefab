@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8222961046012867594}
   - component: {fileID: 6301964713559485679}
   - component: {fileID: 1648079890837608920}
+  - component: {fileID: 4351744153669704202}
   m_Layer: 0
   m_Name: SpeedUP
   m_TagString: Untagged
@@ -115,5 +116,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plusSore: 1
+  _addPower: 5
   _valueSpeed: 10
   _valueTime: 3
+--- !u!50 &4351744153669704202
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6307805276676256675}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
