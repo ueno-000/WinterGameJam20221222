@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == Define.SCENENAME_TITLE)
+        if (SceneManager.GetActiveScene().name == Define.SCENENAME_MASTERGAME)
         {
             _timer -= Time.deltaTime;
 
