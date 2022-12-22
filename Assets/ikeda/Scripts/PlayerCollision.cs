@@ -21,6 +21,11 @@ public class PlayerCollision : MonoBehaviour
             if (_coroutine != null) { StopCoroutine(_coroutine); }
             _coroutine = StartCoroutine(SpeedChange(item.GetValueSpeed, item.GetValueTime));
         }
+        if (collision.gameObject.CompareTag("Player2"))
+        {
+            Vector2 point = Vector2.Lerp(collision.transform.position, transform.position, 0.5f);
+            EfectInstantiater.Instance?.Instantiate(point);
+        }
     }
 
 
