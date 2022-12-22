@@ -15,14 +15,13 @@ public class PlayerSprite : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!_spriteRenderer)
+        {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+        }
         StartCoroutine(Animation());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
     IEnumerator Animation()
