@@ -576,6 +576,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResultUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4339175053204349873, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+      propertyPath: m_Pivot.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339175053204349873, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339175053204349873, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339175053204349873, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339175053204349873, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4339175053204349874, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
