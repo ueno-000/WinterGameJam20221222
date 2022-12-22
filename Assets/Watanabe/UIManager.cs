@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
             _texts[0].text = GameManager.Timer.ToString("F2");
         }
         //スコア表示
-        _texts[1].text = GameManager.ScoreOne.ToString("F2");
-        _texts[2].text = GameManager.ScoreTwo.ToString("F2");
+        _texts[1].text = GameManager.ScoreOne.ToString("F0");
+        _texts[2].text = GameManager.ScoreTwo.ToString("F0");
     }
 }
