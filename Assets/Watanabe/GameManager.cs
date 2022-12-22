@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        _timer = Define.GAME_TIME;
+        _scoreOne = 0;
+        _scoreTwo = 0;
+
         _instance = this;
         SceneChangeScript.Changing = false;
     }
