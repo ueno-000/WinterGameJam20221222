@@ -8,17 +8,18 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Tooltip("制限時間")]
-    [SerializeField] private float _timer = Define.GAME_TIME;
-    [SerializeField] private int _scoreOne = 0;
-    [SerializeField] private int _scoreTwo = 0;
+    [SerializeField] private static float _timer = Define.GAME_TIME;
+    [SerializeField] private static int _scoreOne = 0;
+    [SerializeField] private static int _scoreTwo = 0;
 
     private GameManager _instance = default;
     private SceneManager _scene = default;
     /// <summary> 勝利判定 </summary>
     private Winning _win = default;
 
-    public int ScoreOne { get => _scoreOne; set => _scoreOne = value; }
-    public int ScoreTwo { get => _scoreTwo; set => _scoreTwo = value; }
+    public static float Timer { get => _timer; set => _timer = value; }
+    public static int ScoreOne { get => _scoreOne; set => _scoreOne = value; }
+    public static int ScoreTwo { get => _scoreTwo; set => _scoreTwo = value; }
     public Winning Win { get => _win; set => _win = value; }
 
     private void Start()
@@ -62,7 +63,7 @@ public class GameManager : MonoBehaviour
     private void GetSceneManager()
     {
         //オブジェクト名は後で記述
-        _scene = GameObject.Find("").GetComponent<SceneManager>();
+        _scene = GameObject.Find("SceneManager").GetComponent<SceneManager>();
         SceneChangeScript.Changing = false;
     }
 }
