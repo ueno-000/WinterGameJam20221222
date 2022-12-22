@@ -27,7 +27,7 @@ public class PlayerMove : MonoBehaviour
     Rigidbody2D _rb;
 
     /// <summary>ˆÚ“®‘¬“x‚Ì”{—¦</summary>
-    public float MoveSpeedFact => _moveSpeedFact;
+    public float MoveSpeedFact { get => _moveSpeedFact; set => _moveSpeedFact = value; }
     // Start is called before the first frame update
     void Start()
     {
