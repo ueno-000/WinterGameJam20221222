@@ -11,46 +11,16 @@ public class SpeedItem : ItemBase
     [SerializeField, Tooltip("移動速度を変更する時間")] private float _valueTime = 0;
     /// <summary>速度を変更する時間</summary>
     public float GetValueTime => _valueTime;
-    bool _isPlay = false;
-    PlayerMove _move;
-    float time = 0;
-    private void Start()
+   
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        for (int i = 0; i < _getObj.Length; i++)
+        if(collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
-            _move = _getObj[0].GetComponent<PlayerMove>();
+            PlayEnter();
         }
     }
-
-    //private void Update()
-    //{
-    //    if (_isPlay)
-    //    {
-    //        time += Time.deltaTime;
-    //        PlayEnter();
-    //    }
-    //}
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        _isPlay = true;
-    //    }
-    //}
     protected override void PlayEnter()
     {
-        //if (time < _valueTime)
-        //{
-        //    _keepSpeed = _move.MoveSpeedFact;
-        //    _move.MoveSpeedFact = _valueSpeed;
-        //}
-        //else if (time > _valueTime)
-        //{
-        //    _isPlay = false;
-        //    _move.MoveSpeedFact = _keepSpeed;
-        //    time = 0;
-        //    gameObject.SetActive(false);
-        //}
+        gameObject.SetActive(false);
     }
 }
