@@ -1,5 +1,6 @@
 using Common;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// GameManager(スコア管理、制限時間)
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int _scoreOne = 0;
     [SerializeField] private int _scoreTwo = 0;
 
+    private GameManager _instance = default;
+    private SceneManager _scene = default;
     /// <summary> 勝利判定 </summary>
     private Winning _win = default;
 
@@ -18,9 +21,21 @@ public class GameManager : MonoBehaviour
     public int ScoreTwo { get => _scoreTwo; set => _scoreTwo = value; }
     public Winning Win { get => _win; set => _win = value; }
 
+    private void Start()
+    {
+        _instance = this;
+        SceneChangeScript.Changing = false;
+    }
+
     private void Update()
     {
         _timer -= Time.deltaTime;
+
+        //シーン遷移したらSceneManagerを探す
+        if (SceneChangeScript.Changing)
+        {
+            GetSceneManager();
+        }
 
         //制限時間が0になったら勝利判定して終了
         if (_timer <= 0f)
@@ -39,6 +54,13 @@ public class GameManager : MonoBehaviour
             }
             SceneChangeScript.LoadScene(Define.SCENENAME_RESULT);
         }
+    }
+
+    private void GetSceneManager()
+    {
+        //オブジェクト名は後で記述
+        _scene = GameObject.Find("").GetComponent<SceneManager>();
+        SceneChangeScript.Changing = false;
     }
 }
 
