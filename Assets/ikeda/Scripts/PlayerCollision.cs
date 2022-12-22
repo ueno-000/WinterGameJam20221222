@@ -19,7 +19,7 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.TryGetComponent<SpeedItem>(out SpeedItem item))
         {
             if (_coroutine != null) { StopCoroutine(_coroutine); }
-            StartCoroutine(SpeedChange(item.GetValueSpeed, item.GetValueTime));
+            _coroutine = StartCoroutine(SpeedChange(item.GetValueSpeed, item.GetValueTime));
         }
     }
 
