@@ -29,30 +29,33 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        _timer -= Time.deltaTime;
-
-        //シーン遷移したらSceneManagerを探す
-        if (SceneChangeScript.Changing)
+        if (SceneManager.GetActiveScene().name == Define.SCENENAME_TITLE)
         {
-            GetSceneManager();
-        }
+            _timer -= Time.deltaTime;
 
-        //制限時間が0になったら勝利判定して終了
-        if (_timer <= 0f)
-        {
-            if (_scoreOne > _scoreTwo)
+            //シーン遷移したらSceneManagerを探す
+            if (SceneChangeScript.Changing)
             {
-                _win = Winning.PlayerOne;
+                GetSceneManager();
             }
-            else if (_scoreOne < _scoreTwo)
+
+            //制限時間が0になったら勝利判定して終了
+            if (_timer <= 0f)
             {
-                _win = Winning.PlayerTwo;
+                if (_scoreOne > _scoreTwo)
+                {
+                    _win = Winning.PlayerOne;
+                }
+                else if (_scoreOne < _scoreTwo)
+                {
+                    _win = Winning.PlayerTwo;
+                }
+                else if (_scoreOne == _scoreTwo)
+                {
+                    _win = Winning.Draw;
+                }
+                SceneChangeScript.LoadScene(Define.SCENENAME_RESULT);
             }
-            else if (_scoreOne == _scoreTwo)
-            {
-                _win = Winning.Draw;
-            }
-            SceneChangeScript.LoadScene(Define.SCENENAME_RESULT);
         }
     }
 
