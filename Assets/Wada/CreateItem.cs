@@ -16,10 +16,6 @@ public class CreateItem : MonoBehaviour
     Transform[] _generatePos;
 
 
-
-    [Tooltip("ƒAƒCƒeƒ€"), SerializeField]
-    GameObject[] _scoreObj;
-
     [SerializeField]
     Items[] _items;
 
@@ -27,7 +23,7 @@ public class CreateItem : MonoBehaviour
 
     void Start()
     {
-
+        StartCoroutine(ItemGenerate());
     }
 
 
@@ -50,9 +46,10 @@ public class CreateItem : MonoBehaviour
             if (result <= sum)
             {
                 ObjectPool.Instance.Use(_items[i].item.gameObject, _generatePos[UnityEngine.Random.Range(0, 3)].position);
+                break;
             }
         }
-
+        StartCoroutine(ItemGenerate());
     }
 
 
