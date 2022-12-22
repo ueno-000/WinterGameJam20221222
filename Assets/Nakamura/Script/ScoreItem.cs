@@ -8,7 +8,7 @@ public class ScoreItem : ItemBase
     string _enterPlayer;
     private void Start()
     {
-        _getManager = _getObj[0].GetComponent<GameManager>();
+        _getManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
