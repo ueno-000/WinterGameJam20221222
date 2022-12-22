@@ -22,7 +22,7 @@ public class SceneChangeScript
     public static void Load(string sceneName)
     {
         roadNow = false;
-        changing = true;
         SceneManager.LoadScene(sceneName);
+        changing = true;
     }
 }
