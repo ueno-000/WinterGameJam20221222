@@ -12,15 +12,39 @@ public class GameManager : MonoBehaviour
     [SerializeField] private static int _scoreOne = 0;
     [SerializeField] private static int _scoreTwo = 0;
 
+    [SerializeField] AudioClip _audioClip;
+    [SerializeField] AudioSource _audioSource;
+
+    static AudioClip _staticAudioClip;
+    static AudioSource _staticAudioSource;
+
     private GameManager _instance = default;
     private SceneManager _scene = default;
     /// <summary> èüóòîªíË </summary>
     private static Winning _win = default;
 
     public static float Timer { get => _timer; set => _timer = value; }
-    public static int ScoreOne { get => _scoreOne; set => _scoreOne = value; }
+    public static int ScoreOne
+    {
+        get => _scoreOne;
+
+        set
+        {
+            _staticAudioSource.PlayOneShot(_staticAudioClip);
+            _scoreOne = value;
+        }
+    }
+
+
     public static int ScoreTwo { get => _scoreTwo; set => _scoreTwo = value; }
     public static Winning Win { get => _win; set => _win = value; }
+
+    private void Awake()
+    {
+        _staticAudioClip = _audioClip;
+        _staticAudioSource = _audioSource;
+
+    }
 
     private void Start()
     {

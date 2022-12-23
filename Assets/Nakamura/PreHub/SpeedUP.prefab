@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _plusSore: 1
   _addPower: 5
-  _valueSpeed: 10
+  _valueSpeed: 2
   _valueTime: 3
 --- !u!50 &4351744153669704202
 Rigidbody2D:

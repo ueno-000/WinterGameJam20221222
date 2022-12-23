@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c7a3a1d446db8429956dd86e8f1f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: {x: 1, y: 1}
+  _moveSpeed: {x: 5, y: 3}
   _rightKey: 100
   _leftKey: 97
   _upKey: 119
