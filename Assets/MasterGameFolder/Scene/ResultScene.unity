@@ -386,6 +386,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1232943505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4339175053678918133, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+  m_PrefabInstance: {fileID: 4339175054339292048}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1271780306 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4339175053863504099, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+  m_PrefabInstance: {fileID: 4339175054339292048}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1388150711
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,9 +695,25 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4339175054339292053, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+      propertyPath: _win.Array.data[0]
+      value: 
+      objectReference: {fileID: 1271780306}
+    - target: {fileID: 4339175054339292053, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+      propertyPath: _win.Array.data[1]
+      value: 
+      objectReference: {fileID: 1232943505}
+    - target: {fileID: 4339175054339292053, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
       propertyPath: _winning.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4339175054339292053, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+      propertyPath: _score.Array.data[0]
+      value: 
+      objectReference: {fileID: 4339175054339292051}
+    - target: {fileID: 4339175054339292053, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
+      propertyPath: _score.Array.data[1]
+      value: 
+      objectReference: {fileID: 4339175054339292050}
     - target: {fileID: 4339175054339292053, guid: fb498be66b8f0ca4eb2d53bde5db48f7, type: 3}
       propertyPath: _texts.Array.data[0]
       value: 
