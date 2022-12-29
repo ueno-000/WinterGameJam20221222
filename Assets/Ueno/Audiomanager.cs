@@ -1,20 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
-/// âπÇÃä«óù
+///buttonÇ…éÊÇËïtÇØÇÈAudioManager(ButtonÇÃÇ›)
 /// </summary>
 public class Audiomanager : MonoBehaviour
 {
-    [SerializeField] public AudioSource AudioSourseBGM;
-    [SerializeField] public AudioSource AudioSourseButton;
+    [SerializeField] private AudioClip _buttonSE;
+    private AudioSource _buttonSourse;
 
+    private Button[] _buttons = default;
 
-    public void AudioPlay(AudioClip audioClip,AudioSource audio)
+    private void Start()
     {
-        Debug.Log(audioClip);
-        audio = audio.gameObject.GetComponent<AudioSource>();
-        audio.PlayOneShot(audioClip);
+        _buttons= GameObject.FindObjectsOfType<Button>();
+
+        _buttonSourse = GetComponent<AudioSource>();
+
+        foreach (var b in _buttons)
+        {
+            b.onClick.AddListener(OnClickSE);
+        }
     }
+
+    public void OnClickSE()
+    {
+        _buttonSourse.PlayOneShot(_buttonSE);
+    }
+
 }
